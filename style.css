@@ -34,40 +34,22 @@ th {
     display: block;
     margin:0 auto;
 }
-
-/* ============= button styles============ */
-
-.button-success,
-.button-error,
-.button-warning,
-.button-secondary {
-    color: white;
-    border-radius: 4px;
-    padding: 3px;
-    width: 100%;
-}
-
-.button-success {
-    background: #fb3364;
-    /* this is a green */
-}
-
-.button-error {
-    background: #0ba589;
-    /* this is a maroon */
-}
-
-.button-warning {
-    background: #8e9291;
-    /* this is an orange */
-}
-
-.button-secondary {
-    background: #0ba589;
-    /* this is a light blue */
-}
- .abc
+.all_buttons
  {
     padding: 5px;
     border-radius:5px;
+    text-align: end;
+    font-weight: 600;
+    margin:3px;
+ }
+ .sub_text
+ {
+    margin-top: 0px;
+    margin-left: 5px;
+      
+ }
+ .name_subInfo
+ {
+    display: flex;
+    gap: .5rem;
  }

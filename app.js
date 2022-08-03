@@ -13,7 +13,7 @@ let myData = [
         "t": "123",
         "h": "123",
         "l": "123",
-        "c":"#fb3364"
+        "c": "#fb3364"
     },
     {
 
@@ -29,7 +29,7 @@ let myData = [
         "t": "123",
         "h": "123",
         "l": "123",
-        "c":"blue"
+        "c": " #0ba589"
     },
     {
 
@@ -45,7 +45,7 @@ let myData = [
         "t": "123",
         "h": "123",
         "l": "123",
-        "c":"gray"
+        "c": "#8e9291"
     },
     {
 
@@ -61,7 +61,7 @@ let myData = [
         "t": "123",
         "h": "123",
         "l": "123",
-        "c":"blue"
+        "c": " #0ba589"
     }
 ]
 
@@ -70,7 +70,7 @@ let test;
 
 document.getElementById('select_option').addEventListener('change', (e) => {
     test = e.target.value;
-   
+
     table.innerHTML = ''
     buildTable(myData, test)
 
@@ -80,17 +80,19 @@ buildTable(myData, t = 'price')
 
 function buildTable(data, t) {
 
-
-
-    console.log(t);
-
     for (var i = 0; i < data.length; i++) {
         var row = `<tr>
 
         <td>
             
              ${data[i].name}
-           <p>V:123 T:123 H:123 L:123</p>
+             <div class="name_subInfo">
+             <p>V: ${data[i].v}</p>
+             <p>T: ${data[i].t}</p>
+             <p>H: ${data[i].h}</p>
+             <p>L: ${data[i].l}</p>
+             </div>
+           
        </td>
 
         <td>
@@ -99,18 +101,15 @@ function buildTable(data, t) {
         </td>
 
      <td>
-        <div id="price">
+        <div>
      
-               
-              
-
-                <p class="abc" style="background:${data[i].c};">
+                 <p class="all_buttons" style="background:${data[i].c};">
                     ${t == 'price' ? data[i].price
                 : t == 'change' ? data[i].change
                     : t == 'percentage' ? data[i].percentage_change
                         : ''}
                 </p >
-                <p>
+                <p class="sub_text">
                     ${t == 'price' ? data[i].sub_change
                 : t == 'change' ? data[i].sub_price
                     : t == 'percentage' ? data[i].price_change
