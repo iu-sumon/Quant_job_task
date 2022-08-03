@@ -1,0 +1,73 @@
+body {
+    background-color: black;
+    margin: 0px;
+    padding: 0px;
+}
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 50%;
+    margin: 0 auto;
+}
+ 
+
+tr {
+    color: white;
+    border-bottom: 1px solid rgb(77, 76, 76);
+}
+
+td,
+th {
+    text-align: left;
+    padding: 8px;
+}
+
+.table_header {
+    background-color: #18191b;
+}
+
+#select_option {
+    background-color: #18191b;
+    color: white;
+    border: none;
+    display: block;
+    margin:0 auto;
+}
+
+/* ============= button styles============ */
+
+.button-success,
+.button-error,
+.button-warning,
+.button-secondary {
+    color: white;
+    border-radius: 4px;
+    padding: 3px;
+    width: 100%;
+}
+
+.button-success {
+    background: #fb3364;
+    /* this is a green */
+}
+
+.button-error {
+    background: #0ba589;
+    /* this is a maroon */
+}
+
+.button-warning {
+    background: #8e9291;
+    /* this is an orange */
+}
+
+.button-secondary {
+    background: #0ba589;
+    /* this is a light blue */
+}
+ .abc
+ {
+    padding: 5px;
+    border-radius:5px;
+ }
