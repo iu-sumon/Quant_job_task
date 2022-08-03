@@ -87,10 +87,10 @@ function buildTable(data, t) {
             
              ${data[i].name}
              <div class="name_subInfo">
-             <p>V: ${data[i].v}</p>
-             <p>T: ${data[i].t}</p>
-             <p>H: ${data[i].h}</p>
-             <p>L: ${data[i].l}</p>
+             <p>V:${data[i].v}</p>
+             <p>T:${data[i].t}</p>
+             <p>H:${data[i].h}</p>
+             <p>L:${data[i].l}</p>
              </div>
            
        </td>
