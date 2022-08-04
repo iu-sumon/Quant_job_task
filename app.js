@@ -100,42 +100,6 @@ document.getElementById('price').addEventListener('click', (e) => {
 
 })
 
-
-
-
-
-
-
-
-
-
-
-
-// btn.addEventListener('click', () => {
-
-//     if (a == 'Price') {
-
-//         test1 = test.innerText = 'Change'
-
-//         table.innerHTML = ''
-
-//         buildTable(myData, test1)
-
-//     }
-
-//     else if (test1 == 'Change') {
-
-//         test1 = test.innerText = '%Change'
-
-//         table.innerHTML = ''
-
-//         buildTable(myData, test1 = 'Percentage')
-//     }
-
-
-// })
-
-
 buildTable(myData, t = 'Price')
 
 function buildTable(data, t) {
