@@ -66,17 +66,77 @@ let myData = [
 ]
 
 var table = document.getElementById('table_body')
-let test;
+let click = 0;
 
-document.getElementById('select_option').addEventListener('change', (e) => {
-    test = e.target.value;
+let changeable_text = document.getElementById('price')
 
-    table.innerHTML = ''
-    buildTable(myData, test)
+function countClick() {
+    click += 1;
+    if (click == 3) {
+        click = 0
+    }
+};
+
+document.getElementById('price').addEventListener('click', (e) => {
+
+    if (click == 0) {
+        changeable_text.innerText = 'Price'
+        table.innerHTML = ''
+        buildTable(myData, 'Price')
+    }
+    else if (click == 1) {
+        changeable_text.innerText = 'Change'
+        table.innerHTML = ''
+        buildTable(myData, 'Change')
+
+    }
+    else {
+        changeable_text.innerText = '%Change'
+        table.innerHTML = ''
+        buildTable(myData, 'Percentage')
+
+    }
+
 
 })
 
-buildTable(myData, t = 'price')
+
+
+
+
+
+
+
+
+
+
+
+// btn.addEventListener('click', () => {
+
+//     if (a == 'Price') {
+
+//         test1 = test.innerText = 'Change'
+
+//         table.innerHTML = ''
+
+//         buildTable(myData, test1)
+
+//     }
+
+//     else if (test1 == 'Change') {
+
+//         test1 = test.innerText = '%Change'
+
+//         table.innerHTML = ''
+
+//         buildTable(myData, test1 = 'Percentage')
+//     }
+
+
+// })
+
+
+buildTable(myData, t = 'Price')
 
 function buildTable(data, t) {
 
@@ -104,17 +164,18 @@ function buildTable(data, t) {
         <div>
      
                  <p class="all_buttons" style="background:${data[i].c};">
-                    ${t == 'price' ? data[i].price
-                : t == 'change' ? data[i].change
-                    : t == 'percentage' ? data[i].percentage_change
+                    ${t == 'Price' ? data[i].price
+                : t == 'Change' ? data[i].change
+                    : t == 'Percentage' ? data[i].percentage_change
                         : ''}
-                </p >
+                </p>
+
                 <p class="sub_text">
-                    ${t == 'price' ? data[i].sub_change
-                : t == 'change' ? data[i].sub_price
-                    : t == 'percentage' ? data[i].price_change
+                    ${t == 'Price' ? data[i].sub_change
+                : t == 'Change' ? data[i].sub_price
+                    : t == 'Percentage' ? data[i].price_change
                         : ''}
-                </p >
+                </p>
        </div >
 
       
@@ -127,12 +188,3 @@ function buildTable(data, t) {
 }
 
 
-{/* <div id="change">
-<button class="button-error pure-button">${data[i].change}</button>
-<p>${data[i].sub_price}</p>
-</div>
-
-<div id="change_percen">
- <button class="button-warning pure-button">${data[i].percentage_change}</button>
-<p>${data[i].price_change}</p>
-</div> */}

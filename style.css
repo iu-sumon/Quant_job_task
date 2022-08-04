@@ -27,12 +27,37 @@ td,
 th {
     text-align: left;
     padding: 5px !important;
-    
+     
 }
 
 .table_header {
     background-color: #18191b;
 }
+.changeable_btn
+{
+    background-color: black !important;
+    color: white;
+    margin-left: 40px;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    gap: 5px;
+}
+
+.changeable_btn img
+{
+    width:20px;
+    height: 20px;
+    text-align: center;
+    
+}
+
+
+
+
+
+
+
 
 #select_option {
     background-color: #18191b;
