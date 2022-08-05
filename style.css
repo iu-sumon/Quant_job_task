@@ -4,14 +4,16 @@ body {
     padding: 0px;
     overflow: hidden;
 }
-main{
-    width:50%;
+
+main {
+    width: 50%;
     margin: 0 auto;
 }
+
 table {
     font-family: arial, sans-serif;
     border-collapse: collapse;
-    width:100%;
+    width: 100%;
     position: relative;
 }
 
@@ -19,47 +21,50 @@ table {
 tr {
     color: white;
     border-bottom: 1px solid rgb(77, 76, 76);
-    
-     
+
+
 }
 
 td,
 th {
     text-align: left;
     padding: 5px !important;
-     
+   
+
 }
 
 .table_header {
     background-color: #18191b;
 }
-.changeable_btn
-{
-    background-color: black !important;
+
+.changeable_btn {
+    background-color:#18191b !important;
     color: white;
     margin-left: 40px;
     display: flex;
-    justify-content:center;
+    justify-content: center;
     align-items: center;
     gap: 5px;
     border: none;
     cursor: pointer;
+    width: 50%;
 }
 
-.changeable_btn img
-{
-    width:20px;
+.changeable_btn img {
+    width: 20px;
     height: 20px;
     text-align: center;
-    
+
 }
+
 .all_buttons {
     padding: 5px;
     border-radius: 5px;
     text-align: end;
     font-weight: 600;
-    margin:3px;
-     width:60%;
+    margin: 3px;
+    width: 50%;
+    
 }
 
 .sub_text {
@@ -69,8 +74,8 @@ th {
 }
 
 .name_subInfo {
-    display:flex;
-    gap:.1rem;
+    display: flex;
+    gap: .1rem;
 }
 
 .circle_btn {
@@ -85,39 +90,40 @@ th {
     font-size: 20px;
     font-weight: bold;
     position: absolute;
-    top:40rem;
+    top: 40rem;
     left: 68rem;
 }
 
+                      
+ 
+
+
+
 /* ===========MEDIA QUERIES (md)========= */
 @media screen and (max-width: 760px),
-(min-device-width: 768px) and (max-device-width: 1024px)  {
-   main
-   {
-    width:fit-content;
-   }
-   .circle_btn
- {
-    top:30rem;
-    left:20rem;
- }
- }
- 
- /* ===========MEDIA QUERIES (sm)========= */
- @media screen and (max-width:600px) {
-main
-{
-   width:fit-content;
+(min-device-width: 768px) and (max-device-width: 1024px) {
+    main {
+        width: fit-content;
+    }
+
+    .circle_btn {
+        top: 30rem;
+        left: 20rem;
+    }
 }
- 
-.all_buttons
-{
-    padding:3px;
+
+/* ===========MEDIA QUERIES (sm)========= */
+@media screen and (max-width:600px) {
+    main {
+        width: fit-content;
+    }
+
+    .all_buttons {
+        padding: 3px;
+    }
+
+    .circle_btn {
+        top: 30rem;
+        left: 20rem;
+    }
 }
-.circle_btn
- {
-    top:30rem;
-    left:20rem;
- }
- }
- 

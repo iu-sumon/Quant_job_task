@@ -82,10 +82,7 @@ function countClick() {
         click = 0
     }
     table.innerHTML = ''
-    // tdHandler(click)
-    click == 1 ? changeable_text.innerText='Change'
-        : click == 2 ? changeable_text.innerText='%Change' :changeable_text.innerText='Price'
-    
+    tdHandler(click)
     buildTable(myData, click)
 
 
@@ -93,10 +90,24 @@ function countClick() {
 
 
 
+document.getElementById('price').addEventListener('click', () => {
+    if (click == 0) {
+        changeable_text.innerText = 'Change'
+    }
+    else if (click == 1) {
+        changeable_text.innerText = '%Change'
+    }
+    else {
+        changeable_text.innerText = 'Price'
+    }
+})
+
+
+
 buildTable(myData, click)
 
 function buildTable(data, t) {
-
+console.log(t);
     for (var i = 0; i < data.length; i++) {
         var row = `<tr id="tr">
 
@@ -142,4 +153,34 @@ ${t == 0 ? data[i].sub_change
 
 }
 
- 
+function tdHandler(c) {
+
+    let getTd = document.querySelectorAll(".last_td")
+
+
+    for (i = 0; i < getTd.length; i++) {
+
+        getTd[i].addEventListener('click', () => {
+
+            if (c == 0) {
+                changeable_text.innerText = 'Change'
+
+
+            }
+            else if (c == 1) {
+                changeable_text.innerText = '%Change'
+
+
+
+            }
+            else {
+                changeable_text.innerText = 'Price'
+
+
+
+            }
+
+        })
+    }
+
+}
